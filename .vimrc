@@ -15,7 +15,7 @@ set background=dark
 set ruler "shows line#,col# on bottom right side
 set number "line numbers
 set cursorline "highlight current line
-set colorcolumn=80 "ruler
+set colorcolumn=120 "ruler
 
 "Themes
 colorscheme solarized
