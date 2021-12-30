@@ -1,4 +1,12 @@
-execute pathogen#infect()
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'joshdick/onedark.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'itchyny/lightline.vim'
+call plug#end()
 
 "Settings
 set nocompatible
@@ -18,7 +26,8 @@ set cursorline "highlight current line
 set colorcolumn=120 "ruler
 
 "Themes
-colorscheme solarized
+colorscheme onedark
+"colorscheme solarized
 
 "Indentation
 filetype indent plugin on
@@ -54,25 +63,8 @@ set incsearch "search incrementally
 set ignorecase "case insensitive search
 set smartcase "when search contains uppercase, it is case sensitive
 
-"Style
-au BufWrite * :Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
-
 "Statusline
 set laststatus=2
-let g:lightline={ 'colorscheme':'solarized' }
+let g:lightline={ 'colorscheme':'onedark' }
 set noshowmode
 
-"TeX Live Preview
-autocmd Filetype tex setl updatetime=1000
-let g:livepreview_previewer='open -a Skim'
-autocmd BufNewFile,BufRead *.tex nmap <C-t> :LLPStartPreview<CR>
-
-"Markdown Preview
-let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='<C-t>'
-let vim_markdown_preview_github=1
-let vim_markdown_preview_temp_file=1
-let vim_markdown_preview_browser='Google Chrome'
