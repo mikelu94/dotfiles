@@ -26,8 +26,8 @@ set cursorline "highlight current line
 set colorcolumn=120 "ruler
 
 "Themes
-colorscheme onedark
-"colorscheme solarized
+"colorscheme onedark
+colorscheme solarized
 
 "Indentation
 filetype indent plugin on
@@ -65,6 +65,6 @@ set smartcase "when search contains uppercase, it is case sensitive
 
 "Statusline
 set laststatus=2
-let g:lightline={ 'colorscheme':'onedark' }
+let g:lightline={ 'colorscheme':'solarized' }
 set noshowmode
 
