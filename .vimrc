@@ -13,7 +13,7 @@ set nocompatible
 set confirm "asks to save when quitting
 set wildmenu "visual autocomplete
 set lazyredraw "redraw only when we need to
-set visualbell "diable beeping
+set visualbell "disable beeping
 set mouse=a "select text with cursor
 nmap <C-\> :NERDTreeToggle<CR>
 
