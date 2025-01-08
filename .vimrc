@@ -26,8 +26,13 @@ set cursorline "highlight current line
 set colorcolumn=120 "ruler
 
 "Themes
-"colorscheme onedark
-colorscheme solarized
+if $TERM_PROGRAM == "iTerm.app"
+    colorscheme solarized
+    let g:lightline={ 'colorscheme':'solarized' }
+elseif $TERM_PROGRAM == "ghostty"
+    colorscheme onedark
+    let g:lightline={ 'colorscheme':'one' }
+endif
 
 "Indentation
 filetype indent plugin on
@@ -43,6 +48,7 @@ autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 "JavaS
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 "HTML
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2 "CSS
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2 "ruby
+autocmd FileType php setlocal shiftwidth=2 softtabstop=2 tabstop=2 "PHP
 
 "Splitting
 set splitright
@@ -65,6 +71,5 @@ set smartcase "when search contains uppercase, it is case sensitive
 
 "Statusline
 set laststatus=2
-let g:lightline={ 'colorscheme':'solarized' }
 set noshowmode
 
