@@ -45,6 +45,7 @@ set smartindent "indentation based on code
 
 "Frontend Indentation
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 "JavaScript
+autocmd FileType typescript setlocal shiftwidth=2 softtabstop=2 tabstop=2 "TypeScript
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 tabstop=2 "HTML
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2 "CSS
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2 "ruby
